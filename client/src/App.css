@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+h2,p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+main > :first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > :nth-child(2) {
+  background: #3a3a3a;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "item-1 item-2"
+                       "item-4 item-3";
+  grid-gap: 3rem;
+}
+main > :nth-child(2) > :nth-child(3) {
+  grid-area: item-3;
+}
+main > :nth-child(2) p,
+main > :nth-child(2) h2 {
+  color: white;
+}
+section {
+  padding: 7rem;
+}
+
+section > div {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section p {
+  margin-top: 0.5rem;
+}
+
+@media all and (max-width: 64rem) {
+  main > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+  main > :first-child {
+    flex-direction: column-reverse;
+  }
+  img {
+    padding: 2rem;
+  }
+  section > div {
+  padding: 0;
+  padding-top: 2rem;
+  }
+}
+
+@media all and (max-width: 50rem) {
+  section {
+    padding: 5rem 3rem;
+  }
+}
+
+@media all and (max-width: 40rem) {
+  section {
+    padding: 5rem 2rem;
+  }
+}
+
+
+@media all and (max-width: 34rem) {
+  main > :nth-child(1) {
+    flex-direction: column-reverse;
+  }
+  img {
+    padding: 4rem 0 2rem;
+  }
+  section {
+    padding: 5rem 1rem;
+  }
+  section > div {
+  padding: 0;
+  padding-top: 2rem;
+}
+}

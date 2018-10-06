@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
+import MovieSlider from "./MovieSlider";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <MovieSlider />
         <main>
           <section>
             <img src="https://i.vimeocdn.com/video/595198868_505x160.jpg" />

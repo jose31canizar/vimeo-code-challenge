@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+.loading {
+  text-align: center;
+  padding: 10rem;
+}
+
 .caption-buttons {
   padding: 1rem 0 5rem;
 }
@@ -35,9 +44,14 @@
 
 .movie-item {
   display: flex !Important;
+  align-items: flex-start;
   padding: 7rem 10rem;
   position: relative;
   height: 100%;
+}
+
+.caption {
+  text-decoration: none;
 }
 
 @media all and (min-width: 64rem) {
@@ -54,6 +68,9 @@
     justify-content: space-between;
     margin: 1rem 0;
   }
+  .movie-image img {
+    padding: 7rem 7rem 1rem;
+  }
 }
 
 @media all and (max-width: 43.99rem) {
@@ -62,6 +79,9 @@
     flex-direction: row;
     justify-content: space-around;
     margin: 1rem 0;
+  }
+  .movie-image img {
+    padding: 5rem 5rem 1rem;
   }
 }
 
@@ -76,9 +96,8 @@
 }
 
 .movie-image img {
-  height: 20rem;
   margin: auto;
-  width: auto;
+  object-fit: contain;
 }
 
 
